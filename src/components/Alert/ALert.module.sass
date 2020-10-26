@@ -1,0 +1,28 @@
+@import '~assets/styles/_vars.sass'
+
+.alert
+  position: fixed
+  top: 20px
+  left: 20px
+  right: 20px
+  max-width: 90vw
+  padding: 10px 20px 10px 10px
+  border-radius: $border-radius
+  font-size: 18px
+  text-align: center
+  cursor: pointer
+  z-index: 5
+
+  &::after
+    content: '\02DF'
+    position: absolute
+    right: 10px
+    top: 10px
+
+  &.info
+    border: 1px solid $info-color
+    color: $text-info
+
+  &.error
+    border: 1px solid $error-color
+    color: $text-error
