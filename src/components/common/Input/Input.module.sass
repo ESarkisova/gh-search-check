@@ -1,0 +1,33 @@
+@import '~assets/styles/_vars.sass'
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+.input__wrapper
+  position: relative
+
+.input
+  width: $input-width
+  height: $input-height
+  background-color: #fff
+  border-radius: $border-radius
+  border: 1px solid $border-color
+  padding: 7px 10px
+  color: $text-color
+  font-size: 16px
+  box-sizing: border-box
+  @media (max-width: $mobile-break)
+    width: 100%
+
+  &:focus
+    outline: 0
+
+  @include placeholder
+    color: $text-color-light

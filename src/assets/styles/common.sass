@@ -1,0 +1,67 @@
+body
+  margin: 0
+  padding: 0
+
+#root
+  display: block
+  width: 100%
+  min-height: 100vh
+  background: #fff
+  font: 400 16px ProximaNova, sans-serif
+  color: $text-color
+  @media (max-width: $mobile-break)
+    font-size: 14px
+
+.container
+  display: block
+  width: 1200px
+  max-width: 100%
+  margin: 0 auto
+  padding: 0 15px
+  box-sizing: border-box
+
+.loading
+  position: relative
+  opacity: .8
+  pointer-events: none
+
+  &::after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -25px
+    margin-top: -25px
+    width: 50px
+    height: 50px
+    border: 2px solid #6f6969
+    border-left: none
+    border-radius: 50%
+    animation: rotate 1.5s
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+
+.flex-left
+  margin-left: 0
+  margin-right: auto
+  @media (max-width: $mobile-break)
+    margin: 10px auto
+    width: 100%
+
+.flex-right
+  margin-left: auto
+  margin-right: 0
+  @media (max-width: $mobile-break)
+    margin: 10px auto
+    width: 100%
+
+.text-center
+  text-align: center
+
+.mt-20
+  margin-top: 20px

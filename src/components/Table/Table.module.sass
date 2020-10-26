@@ -1,0 +1,53 @@
+@import '~assets/styles/_vars.sass'
+
+.table
+  &__block
+    display: flex
+    margin-bottom: 20px
+    justify-content: center
+    flex-wrap: wrap
+
+  &__wrapper
+    width: 100%
+    max-width: 900px
+    margin: 80px auto 20px
+
+  &__row
+    display: grid
+    width: 100%
+    padding: 5px
+    grid-template-columns: 2fr 3fr 2fr 1fr 2fr
+    background-color: $bg-color
+    @media (max-width: $tablet-break)
+      display: block
+
+    &:nth-child(2n)
+      background-color: $bg-color-dark
+
+    div
+      overflow: hidden
+      padding: 3px
+      @media (max-width: $tablet-break)
+        display: flex
+        justify-content: flex-start
+        text-align: left !important
+
+    span:first-of-type
+      display: none
+      font-weight: bold
+      @media (max-width: $tablet-break)
+        display: inline-block
+        width: 34%
+        padding-right: 10px
+
+    .table__content
+      @media (max-width: $tablet-break)
+        display: inline-block
+        width: 66%
+
+    &_header
+      font-weight: bold
+      font-size: 16px
+      text-align: center
+      @media (max-width: $tablet-break)
+        display: none
